@@ -1,0 +1,176 @@
+{% extends "layout.html" %}
+
+{% block title %}Recruitment Agency{% endblock %}
+
+{% block content %}
+  {#  Hero Section  #}
+  <section id="hero-section">
+    <img id="hero-img" src="{{ url_for('static', filename='images/hero.png') }}" alt="" class="img-fluid w-100">
+    <div id="hero-texts" class="container-fluid">
+      <p id="hero-text1" class="fs-1">{{ translations['hero-text1'] }}</p>
+      <p id="hero-text2" class="fs-4 mt-4">{{ translations['hero-text2'] }}</p>
+      <div class="d-flex mt-5 gap-2">
+        <a id="hero-button1" href="#" class="btn btn-lg btn-primary">{{ translations['hero-button1'] }}</a>
+        <a id="hero-button2" href="#process-section" class="btn btn-lg btn-outline-secondary">{{ translations['hero-button2'] }}</a>
+      </div>
+    </div>
+  </section>
+
+    {# About Us Section #}
+  <section id="about-section" class="sm">
+    <div id="about-card" class="container-fluid d-flex pe-2 ps-0 shadow-lg">
+      <div class="text-box ">
+        <p class="text-secondary fs-5">{{ translations['about-text1'] }}</p>
+        <p class="fs-3 pe-5 mt-3">{{ translations['about-text2'] }}</p>
+        <p class="fs-4 pe-5 mt-4 text-secondary">{{ translations['about-text3'] }}</p>
+        <div class="pe-5 pt-5 mt-5">
+          <div class="d-flex gap-3">
+            <i class="bi bi-check-circle fs-3 text-primary"></i>
+            <p class="fs-5">{{ translations['about-text4'] }}</p>
+          </div>
+          <div class="d-flex gap-3">
+            <i class="bi bi-check-circle fs-3 text-primary"></i>
+            <p class="fs-5">{{ translations['about-text5'] }}</p>
+          </div>
+          <div class="d-flex gap-3">
+            <i class="bi bi-check-circle fs-3 text-primary"></i>
+            <p class="fs-5">{{ translations['about-text6'] }}</p>
+          </div>
+          <div class="d-flex gap-3">
+            <i class="bi bi-check-circle fs-3 text-primary"></i>
+            <p class="fs-5">{{ translations['about-text7'] }}</p>
+          </div>
+          <div class="d-flex gap-3">
+            <i class="bi bi-check-circle fs-3 text-primary"></i>
+            <p class="fs-5">{{ translations['about-text8'] }}</p>
+          </div>
+        </div>
+      </div>
+      <div class="img-box">
+        <div class="d-flex justify-content-end gap-4">
+          <img id="about-img1" src="{{ url_for('static', filename='images/about1.png') }}" alt="" >
+          <img id="about-img2" src="{{ url_for('static', filename='images/about2.png') }}" alt="" >
+        </div>
+        <div class="mt-3 d-grid">
+          <img id="about-img3" src="{{ url_for('static', filename='images/about3.png') }}" alt="" class="justify-self-start">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {# Services Section #}
+  <section id="services-section" class="sm container">
+    <p class="fs-2">{{ translations['services-title'] }}</p>
+    <div id="services-cards" class="d-flex justify-content-between">
+      <div class="card shadow-lg">
+        <img src="{{ url_for('static', filename='images/services-driver.png') }}" class="card-img-top" alt="">
+        <div class="card-body">
+          <p class="card-text text-center fs-3">{{ translations['services-text1'] }}</p>
+        </div>
+      </div>
+      <div class="card shadow-lg">
+        <img src="{{ url_for('static', filename='images/services-cleaner.png') }}" class="card-img-top" alt="">
+        <div class="card-body">
+          <p class="card-text text-center fs-3">{{ translations['services-text2'] }}</p>
+        </div>
+      </div>
+      <div class="card shadow-lg">
+        <img src="{{ url_for('static', filename='images/services-cooker.png') }}" class="card-img-top" alt="">
+        <div class="card-body">
+          <p class="card-text text-center fs-3">{{ translations['services-text3'] }}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {# Process Section #}
+  <section id="process-section" class="container-fluid sm">
+    <div class="process-text mb-4 mx-5">
+      <p id="process-text1" class="text-center fs-1 m-0 p-0">{{ translations['process-text1'] }}</p>
+      <p id="process-text2" class="text-center fs-5 m-0 p-0">{{ translations['process-text2'] }}</p>
+    </div>
+    <div id="process-cards" class="d-flex justify-content-evenly position-relative">
+      <div id="process1" class="process-card position-relative bg-primary">
+        <i class="bi bi-search text-white text-center card-icon"></i>
+        <div id="card-step1" class="position-absolute start-50 top-50 translate-middle py-2 w-75 text-center bg-light rounded fs-4">{{ translations['card-step1'] }}</div>
+        <i class="bi bi-caret-left-fill text-primary"></i>
+        <p id="card-text1" class="text-center px-2 process-card-text align-self-bottom">{{ translations['card-text1'] }}</p>
+      </div>
+      <div id="process2" class="process-card position-relative bg-info">
+        <img src="{{ url_for('static', filename='images/musand.png') }}" alt="" class="img-fluid musand">
+        <div id="card-step1" class="position-absolute start-50 top-50 translate-middle py-2 w-75 text-center bg-light rounded fs-4">{{ translations['card-step2'] }}</div>
+        <i class="bi bi-caret-left-fill text-info"></i>
+        <p id="card-text2" class="text-center px-2 process-card-text">{{ translations['card-text2'] }}</p>
+      </div>
+      <div id="process3" class="process-card position-relative bg-success">
+        <i class="bi bi-credit-card-2-back-fill text-white card-icon"></i>
+        <div id="card-step1" class="position-absolute start-50 top-50 translate-middle py-2 w-75 text-center bg-light rounded fs-4">{{ translations['card-step3'] }}</div>
+        <i class="bi bi-caret-left-fill text-success"></i>
+        <p id="card-text3" class="text-center px-2 process-card-text">{{ translations['card-text3'] }}</p>
+      </div>
+      <div id="process3" class="process-card position-relative bg-danger">
+        <i class="bi bi-check-square-fill text-white card-icon"></i>
+        <div id="card-step1" class="position-absolute start-50 top-50 translate-middle py-2 w-75 text-center bg-light rounded fs-4">{{ translations['card-step4'] }}</div>
+        <i class="bi bi-caret-left-fill text-danger"></i>
+        <p id="card-text4" class="text-center px-2 process-card-text">{{ translations['card-text4'] }}</p>
+      </div>
+    </div>
+  </section>
+
+  {# Contact Us Section #}
+  <section id="contact-section" class="sm container">
+    <p class="fs-2">{{ translations['contact-title'] }}</p>
+    <div class="d-flex gap-4">
+      <div id="contact-info" class="d-flex flex-column gap-4">
+        <div id="location-card" class="d-flex gap-3 shadow-lg rounded-4 p-3">
+          <i class="bi bi-geo-alt fs-1 text-primary align-self-center"></i>
+          <div>
+            <p class="text-secondary fw-bold">{{ translations['contact-location-text1'] }}</p>
+            <p>{{ translations['contact-location-text2'] }}</p>
+          </div>
+        </div>
+        <div id="email-card" class="d-flex gap-3 shadow-lg rounded-4 p-3">
+          <i class="bi bi-envelope-at fs-1 text-primary align-self-center"></i>
+          <div>
+            <p class="text-secondary fw-bold">{{ translations['contact-email-text'] }}</p>
+            <p>info@maharatelayadi.com</p>
+          </div>
+        </div>
+        <div id="tel-card" class="d-flex gap-3 shadow-lg rounded-top-4 p-3">
+          <i class="bi bi-telephone-inbound fs-1 text-primary align-self-center"></i>
+          <div>
+            <p class="text-secondary fw-bold">{{ translations['contact-tel-text'] }}</p>
+            <p dir="ltr">+011 451 3999</p>
+            <p dir="ltr">+966 551 7177</p>
+          </div>
+        </div>
+      </div>
+      <div id="contact-form" class="p-3 shadow-lg">
+        <form class="row g-3 needs-validation" novalidate>
+          <div class="col-md-6">
+            <label for="validationCustom01" class="form-label">{{ translations['contact-label-text1'] }}*</label>
+            <input type="text" class="form-control" id="validationCustom01" required>
+            <div class="invalid-feedback">{{ translations['contact-invalid-text1'] }}</div>
+          </div>
+          <div class="col-md-6">
+            <label for="validationCustom02" class="form-label">{{ translations['contact-label-text2'] }}*</label>
+            <input type="tel" class="form-control" id="validationCustom02" required>
+            <div class="invalid-feedback">{{ translations['contact-invalid-text2'] }}</div>
+          </div>
+          <div class="mb-3">
+            <label for="validationTextarea" class="form-label">{{ translations['contact-label-text3'] }}*</label>
+            <textarea class="form-control" id="validationTextarea" rows="8"  required></textarea>
+            <div class="invalid-feedback">{{ translations['contact-invalid-text3'] }}</div>
+          </div>
+
+          <div class="col-12">
+            <button class="btn btn-primary" type="submit">{{ translations['contact-btn-text'] }}</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3622.178909022592!2d46.61644687526784!3d24.789326577975746!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2ee391981e308d%3A0xd04f3518e43b5c9b!2sMaharat%20Al%20Ayadi%20Recruitment!5e0!3m2!1sen!2sus!4v1739210851202!5m2!1sen!2sus"
+            style="border:0;" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+  </section>
+{% endblock %}
