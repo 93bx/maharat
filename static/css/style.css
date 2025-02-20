@@ -105,6 +105,20 @@ iframe {
     margin: 0 7rem ;
 }
 
+.floating-btn-chat {
+    position: fixed;
+    bottom: 5px;
+    right: 5px;
+    z-index: 2;
+}
+
+.floating-btn-whats {
+    position: fixed;
+    bottom: 65px;
+    right: 5px;
+    z-index: 2;
+}
+
 @keyframes slide-left {
     from {
         transform: translateX(0);

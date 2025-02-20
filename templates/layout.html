@@ -52,6 +52,12 @@
       {% block content %}{% endblock %}
     </main>
 
+    <button class="btn btn-lg floating-btn-whats bg-success rounded-5">
+      <i class="bi bi-whatsapp fs-4 text-white"></i>
+    </button>
+    <button class="btn btn-lg floating-btn-chat bg-primary rounded-5">
+      <i class="bi bi-chat-dots fs-4 text-white"></i>
+    </button>
     <div class="carousel-container sm">
       <div class="carousel-wrapper">
         <img src="{{ url_for('static', filename='images/slide-1.svg') }}" alt="">
