@@ -1,3 +1,9 @@
+function init() {
+    applyRTL();
+    formValidation();
+    bottomCarousel();
+}
+
 function switchLang(lang) {
     const url = new URL(window.location);
     url.searchParams.set('lang', lang);
@@ -41,8 +47,8 @@ function applyRTL(){
     }
 }
 
-document.addEventListener("DOMContentLoaded", applyRTL);
-document.addEventListener("DOMContentLoaded", () => {
+function formValidation() {
+    'use strict';
     'use strict';
     const forms = document.querySelectorAll('.needs-validation');
     Array.from(forms).forEach(form => {
@@ -55,9 +61,12 @@ document.addEventListener("DOMContentLoaded", () => {
             form.classList.add("was-validated");
         }, false)
     })
-})
+}
 
-document.addEventListener("DOMContentLoaded", () => {
+function bottomCarousel() {
     let copy = document.querySelector(".carousel-wrapper").cloneNode(true);
     document.querySelector(".carousel-container").appendChild(copy);
+}
+document.addEventListener("DOMContentLoaded", () => {
+    init();
 })
