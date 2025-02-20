@@ -22,21 +22,6 @@ def index():
     return render_template('index.html', translations=g.translations, lang=g.lang)
 
 
-@app.route('/services')
-def services():
-    return render_template('services.html', translations=g.translations, lang=g.lang)
-
-
-@app.route('/order')
-def order():
-    return render_template('order.html', translations=g.translations, lang=g.lang)
-
-
-@app.route('/countries')
-def countries():
-    return render_template('countries.html', translations=g.translations, lang=g.lang)
-
-
 @app.route('/contact')
 def contact():
     return render_template('contact.html', translations=g.translations, lang=g.lang)

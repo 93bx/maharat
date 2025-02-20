@@ -68,6 +68,10 @@ body {
     width: 24rem;
 }
 
+.card:hover {
+    scale: 1.1;
+}
+
 .diagonal-border-img {
     border-radius: 70px 0 70px;
 }

@@ -3,7 +3,59 @@
 {% block title %}Contact Us{% endblock %}
 
 {% block content %}
-    <h1>Contact Us</h1>
-    <p>Email: info@recruitmentagency.com</p>
-    <p>Phone: +123 456 789</p>
+    <section id="contact-section" class="sm container">
+    <p class="fs-2">{{ translations['contact-title'] }}</p>
+    <div class="d-flex gap-4">
+      <div id="contact-info" class="d-flex flex-column gap-4">
+        <div id="location-card" class="d-flex gap-3 shadow-lg rounded-4 p-3 animate slide-in-right">
+          <i class="bi bi-geo-alt fs-1 text-primary align-self-center"></i>
+          <div>
+            <p class="text-secondary fw-bold">{{ translations['contact-location-text1'] }}</p>
+            <p>{{ translations['contact-location-text2'] }}</p>
+          </div>
+        </div>
+        <div id="email-card" class="d-flex gap-3 shadow-lg rounded-4 p-3 animate slide-in-right">
+          <i class="bi bi-envelope-at fs-1 text-primary align-self-center"></i>
+          <div>
+            <p class="text-secondary fw-bold">{{ translations['contact-email-text'] }}</p>
+            <p>info@maharatelayadi.com</p>
+          </div>
+        </div>
+        <div id="tel-card" class="d-flex gap-3 shadow-lg rounded-top-4 p-3 animate slide-in-right">
+          <i class="bi bi-telephone-inbound fs-1 text-primary align-self-center"></i>
+          <div>
+            <p class="text-secondary fw-bold">{{ translations['contact-tel-text'] }}</p>
+            <p dir="ltr">+011 451 3999</p>
+            <p dir="ltr">+966 551 7177</p>
+          </div>
+        </div>
+      </div>
+      <div id="contact-form" class="p-3 shadow-lg animate slide-in-left">
+        <form class="row g-3 needs-validation" novalidate>
+          <div class="col-md-6">
+            <label for="validationCustom01" class="form-label">{{ translations['contact-label-text1'] }}*</label>
+            <input type="text" class="form-control" id="validationCustom01" required>
+            <div class="invalid-feedback">{{ translations['contact-invalid-text1'] }}</div>
+          </div>
+          <div class="col-md-6">
+            <label for="validationCustom02" class="form-label">{{ translations['contact-label-text2'] }}*</label>
+            <input type="tel" class="form-control" id="validationCustom02" required>
+            <div class="invalid-feedback">{{ translations['contact-invalid-text2'] }}</div>
+          </div>
+          <div class="mb-3">
+            <label for="validationTextarea" class="form-label">{{ translations['contact-label-text3'] }}*</label>
+            <textarea class="form-control" id="validationTextarea" rows="8" required style="resize: none"></textarea>
+            <div class="invalid-feedback">{{ translations['contact-invalid-text3'] }}</div>
+          </div>
+
+          <div class="col-12">
+            <button class="btn btn-primary" type="submit">{{ translations['contact-btn-text'] }}</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3622.178909022592!2d46.61644687526784!3d24.789326577975746!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2ee391981e308d%3A0xd04f3518e43b5c9b!2sMaharat%20Al%20Ayadi%20Recruitment!5e0!3m2!1sen!2sus!4v1739210851202!5m2!1sen!2sus"
+            style="border:0;" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="animate zoom-in"></iframe>
+
+  </section>
 {% endblock %}
