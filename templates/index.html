@@ -84,37 +84,46 @@
   </section>
 
   {# Process Section #}
-  <section id="process-section" class="container-fluid sm">
+  <section id="process-section" class="sm">
     <div class="process-text mb-4 mx-5">
-      <p id="process-text1" class="text-center fs-1 m-0 p-0">{{ translations['process-text1'] }}</p>
-      <p id="process-text2" class="text-center fs-5 m-0 p-0">{{ translations['process-text2'] }}</p>
+      <p id="process-title" class="text-center fs-1 m-0 p-0">{{ translations['process-title'] }}</p>
     </div>
-    <div id="process-cards" class="d-flex justify-content-evenly position-relative">
-      <div id="process1" class="process-card position-relative bg-primary">
-        <i class="bi bi-search text-white text-center card-icon"></i>
-        <div id="card-step1" class="position-absolute start-50 top-50 translate-middle py-2 w-75 text-center bg-light rounded fs-4">{{ translations['card-step1'] }}</div>
-        <i class="bi bi-caret-left-fill text-primary"></i>
-        <p id="card-text1" class="text-center px-2 process-card-text align-self-bottom">{{ translations['card-text1'] }}</p>
+    <div id="process1" class="d-flex justify-content-between">
+      <div class="w-50 ">
+        <img src="{{ url_for('static', filename='images/process1-img.png') }}" alt="" class="img-fluid process-img diagonal-border-img">
       </div>
-      <div id="process2" class="process-card position-relative bg-info">
-        <img src="{{ url_for('static', filename='images/musand.png') }}" alt="" class="img-fluid musand">
-        <div id="card-step1" class="position-absolute start-50 top-50 translate-middle py-2 w-75 text-center bg-light rounded fs-4">{{ translations['card-step2'] }}</div>
-        <i class="bi bi-caret-left-fill text-info"></i>
-        <p id="card-text2" class="text-center px-2 process-card-text">{{ translations['card-text2'] }}</p>
-      </div>
-      <div id="process3" class="process-card position-relative bg-success">
-        <i class="bi bi-credit-card-2-back-fill text-white card-icon"></i>
-        <div id="card-step1" class="position-absolute start-50 top-50 translate-middle py-2 w-75 text-center bg-light rounded fs-4">{{ translations['card-step3'] }}</div>
-        <i class="bi bi-caret-left-fill text-success"></i>
-        <p id="card-text3" class="text-center px-2 process-card-text">{{ translations['card-text3'] }}</p>
-      </div>
-      <div id="process3" class="process-card position-relative bg-danger">
-        <i class="bi bi-check-square-fill text-white card-icon"></i>
-        <div id="card-step1" class="position-absolute start-50 top-50 translate-middle py-2 w-75 text-center bg-light rounded fs-4">{{ translations['card-step4'] }}</div>
-        <i class="bi bi-caret-left-fill text-danger"></i>
-        <p id="card-text4" class="text-center px-2 process-card-text">{{ translations['card-text4'] }}</p>
+      <div class="w-50 align-content-center">
+        <p>{{ translations['card-step1'] }}</p>
+        <p>{{ translations['card-text1'] }}</p>
       </div>
     </div>
+    <div id="process2" class="d-flex justify-content-between">
+      <div class="w-50 align-content-center">
+        <p>{{ translations['card-step2'] }}</p>
+        <p>{{ translations['card-text2'] }}</p>
+      </div>
+      <div class="w-50 overflow-hidden">
+        <img src="{{ url_for('static', filename='images/process2-img.png') }}" alt="" class="img-fluid process-img diagonal-border-img">
+      </div>
+    </div >
+    <div id="process3" class="d-flex justify-content-between">
+      <div class="w-50">
+        <img src="{{ url_for('static', filename='images/process3-img.png') }}" alt="" class="img-fluid process-img diagonal-border-img">
+      </div>
+      <div class="w-50 align-content-center">
+        <p>{{ translations['card-step3'] }}</p>
+        <p>{{ translations['card-text3'] }}</p>
+      </div>
+    </div>
+    <div id="process4" class="d-flex justify-content-between">
+      <div class="w-50 align-content-center">
+        <p>{{ translations['card-step4'] }}</p>
+        <p>{{ translations['card-text4'] }}</p>
+      </div>
+      <div class="w-50 ">
+        <img src="{{ url_for('static', filename='images/process4-img.png') }}" alt="" class="img-fluid process-img diagonal-border-img">
+      </div>
+    </div >
   </section>
 
   {# Contact Us Section #}
@@ -159,7 +168,7 @@
           </div>
           <div class="mb-3">
             <label for="validationTextarea" class="form-label">{{ translations['contact-label-text3'] }}*</label>
-            <textarea class="form-control" id="validationTextarea" rows="8"  required></textarea>
+            <textarea class="form-control" id="validationTextarea" rows="8" required style="resize: none"></textarea>
             <div class="invalid-feedback">{{ translations['contact-invalid-text3'] }}</div>
           </div>
 

@@ -64,72 +64,22 @@ body {
     width: 24rem;
 }
 
-
-#process-cards::before {
-    content: "";
-    position: absolute;
-    top: 49.8%;
-    left: 0;
-    width: 100%;
-    height: 0.187rem;
-    background-color: black;
+.diagonal-border-img {
+    border-radius: 70px 0 70px;
 }
 
-.process-card {
-    height: 25rem;
-    width: 15.625rem;
-    border-radius: 2.5rem;
+.diagonal-border-ml-img {
+    border-radius: 70px 0 0 70px;
 }
 
-.process-card::after {
-    content: " ";
-    position: absolute;
-    height: 25rem;
-    width: 15.625rem;
-    border: 0.187rem solid black;
-    border-radius: 2.5rem;
-    margin-top: 0.325rem;
-    margin-right: 0.325rem;
+.diagonal-border-mr-img {
+    border-radius: 0 70px 70px 0;
 }
 
-.process-card.en::after {
-    margin-right: 0;
-    margin-left: 0.325rem;
-}
-
-.card-icon {
-    position: absolute;
-    font-size: 5rem;
-    top: 10%;
-    right: 35%;
-}
-
-.bi-caret-left-fill {
-    font-size: 4.375rem;
-    position: absolute;
-    top: 37%;
-    right: 85%;
-    z-index: 1;
-}
-
-.bi-caret-right-fill {
-    font-size: 4.375rem;
-    position: absolute;
-    top: 37%;
-    left: 85%;
-    z-index: 1;
-}
-
-.process-card-text {
-    position: absolute;
-    top: 60%;
-}
-
-.musand {
-    position: absolute;
-    width: 7.5rem;
-    top: 10%;
-    right: 27%;
+.process-img {
+    width: 100% !important;
+    height: 300px !important;
+    object-fit: cover;
 }
 
 iframe {
