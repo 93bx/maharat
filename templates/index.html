@@ -4,14 +4,47 @@
 
 {% block content %}
   {#  Hero Section  #}
-  <section id="hero-section">
-    <img id="hero-img" src="{{ url_for('static', filename='images/hero.png') }}" alt="" class="img-fluid w-100">
-    <div id="hero-texts" class="container-fluid">
-      <p id="hero-text1" class="fs-1">{{ translations['hero-text1'] }}</p>
-      <p id="hero-text2" class="fs-4 mt-4">{{ translations['hero-text2'] }}</p>
-      <div class="d-flex mt-5 gap-2">
-        <a id="hero-button1" href="#" class="btn btn-lg btn-primary">{{ translations['hero-button1'] }}</a>
-        <a id="hero-button2" href="#process-section" class="btn btn-lg btn-outline-secondary">{{ translations['hero-button2'] }}</a>
+  <section id="hero-section vh-100 overflow-hidden">
+    <div id="hero-carousel" class="carousel carousel-dark slide w-100" data-bs-ride="carousel" direction="right">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="0" class="active" aria-current="true"></button>
+        <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="1" ></button>
+        <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="2" ></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active" data-bs-interval="4000">
+          <img id="hero-img" src="{{ url_for('static', filename='images/hero.png') }}" alt="" class="img-fluid w-100">
+          <div id="hero-texts" class="container-fluid">
+            <p id="hero-text1" class="fs-1">{{ translations['hero-text1'] }}</p>
+            <p id="hero-text2" class="fs-4 mt-4">{{ translations['hero-text2'] }}</p>
+            <div class="d-flex mt-5 gap-2">
+              <a id="hero-button1" href="#" class="btn btn-lg btn-primary">{{ translations['hero-button1'] }}</a>
+              <a id="hero-button2" href="#process-section" class="btn btn-lg btn-outline-secondary">{{ translations['hero-button2'] }}</a>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item" data-bs-interval="4000">
+          <img id="hero-img" src="{{ url_for('static', filename='images/hero2.png') }}" alt="" class="img-fluid w-100">
+          <div id="hero-texts" class="container-fluid">
+            <p id="hero-text1" class="fs-1">{{ translations['hero-text1'] }}</p>
+            <p id="hero-text2" class="fs-4 mt-4">{{ translations['hero-text2'] }}</p>
+            <div class="d-flex mt-5 gap-2">
+              <a id="hero-button1" href="#" class="btn btn-lg btn-primary">{{ translations['hero-button1'] }}</a>
+              <a id="hero-button2" href="#process-section" class="btn btn-lg btn-outline-secondary">{{ translations['hero-button2'] }}</a>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item" data-bs-interval="4000">
+          <img id="hero-img" src="{{ url_for('static', filename='images/hero3.png') }}" alt="" class="img-fluid w-100">
+          <div id="hero-texts" class="container-fluid">
+            <p id="hero-text1" class="fs-1 text-white">{{ translations['hero-text1'] }}</p>
+            <p id="hero-text2" class="fs-4 text-white mt-4">{{ translations['hero-text2'] }}</p>
+            <div class="d-flex mt-5 gap-2">
+              <a id="hero-button1" href="#" class="btn btn-lg btn-primary">{{ translations['hero-button1'] }}</a>
+              <a id="hero-button2" href="#process-section" class="btn btn-lg btn-outline-secondary">{{ translations['hero-button2'] }}</a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
