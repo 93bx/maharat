@@ -4,7 +4,7 @@
 
 {% block content %}
   {#  Hero Section  #}
-  <section id="hero-section vh-100 overflow-hidden">
+  <section id="hero-section">
     <div id="hero-carousel" class="carousel carousel-dark slide w-100" data-bs-ride="carousel">
       <div class="carousel-indicators">
         <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="0" class="active" aria-current="true"></button>
@@ -13,33 +13,33 @@
       </div>
       <div class="carousel-inner">
         <div class="carousel-item active" data-bs-interval="4000">
-          <img id="hero-img" src="{{ url_for('static', filename='images/hero.png') }}" alt="" class="img-fluid w-100">
+          <img id="hero-img" src="{{ url_for('static', filename='images/hero.png') }}" alt="" class="hero-imgs img-fluid w-100">
           <div id="hero-texts" class="container-fluid">
-            <p id="hero-text1" class="fs-1">{{ translations['hero-text1'] }}</p>
-            <p id="hero-text2" class="fs-4 mt-4">{{ translations['hero-text2'] }}</p>
-            <div class="d-flex mt-5 gap-2">
+            <p id="hero-text1" class="fs-1 animate fade-in">{{ translations['hero-text1'] }}</p>
+            <p id="hero-text2" class="fs-4 mt-4 animate fade-in">{{ translations['hero-text2'] }}</p>
+            <div class="d-flex mt-5 gap-2 animate slide-in-left">
               <a id="hero-button1" href="#" class="btn btn-lg btn-primary">{{ translations['hero-button1'] }}</a>
               <a id="hero-button2" href="#process-section" class="btn btn-lg btn-outline-secondary">{{ translations['hero-button2'] }}</a>
             </div>
           </div>
         </div>
         <div class="carousel-item" data-bs-interval="4000">
-          <img id="hero-img" src="{{ url_for('static', filename='images/hero2.png') }}" alt="" class="img-fluid w-100">
+          <img id="hero-img" src="{{ url_for('static', filename='images/hero2.png') }}" alt="" class="hero-imgs img-fluid w-100">
           <div id="hero-texts" class="container-fluid">
-            <p id="hero-text1" class="fs-1">{{ translations['hero-text1'] }}</p>
-            <p id="hero-text2" class="fs-4 mt-4">{{ translations['hero-text2'] }}</p>
-            <div class="d-flex mt-5 gap-2">
+            <p id="hero-text1" class="fs-1 animate fade-in">{{ translations['hero-text1'] }}</p>
+            <p id="hero-text2" class="fs-4 mt-4 animate fade-in">{{ translations['hero-text2'] }}</p>
+            <div class="d-flex mt-5 gap-2 animate slide-in-left">
               <a id="hero-button1" href="#" class="btn btn-lg btn-primary">{{ translations['hero-button1'] }}</a>
               <a id="hero-button2" href="#process-section" class="btn btn-lg btn-outline-secondary">{{ translations['hero-button2'] }}</a>
             </div>
           </div>
         </div>
         <div class="carousel-item" data-bs-interval="4000">
-          <img id="hero-img" src="{{ url_for('static', filename='images/hero3.png') }}" alt="" class="img-fluid w-100">
+          <img id="hero-img" src="{{ url_for('static', filename='images/hero3.png') }}" alt="" class="hero-imgs img-fluid w-100">
           <div id="hero-texts" class="container-fluid">
-            <p id="hero-text1" class="fs-1 text-white">{{ translations['hero-text1'] }}</p>
-            <p id="hero-text2" class="fs-4 text-white mt-4">{{ translations['hero-text2'] }}</p>
-            <div class="d-flex mt-5 gap-2">
+            <p id="hero-text1" class="fs-1 text-white animate fade-in">{{ translations['hero-text1'] }}</p>
+            <p id="hero-text2" class="fs-4 text-white mt-4 animate fade-in">{{ translations['hero-text2'] }}</p>
+            <div class="d-flex mt-5 gap-2 animate slide-in-left">
               <a id="hero-button1" href="#" class="btn btn-lg btn-primary">{{ translations['hero-button1'] }}</a>
               <a id="hero-button2" href="#process-section" class="btn btn-lg btn-outline-secondary">{{ translations['hero-button2'] }}</a>
             </div>
@@ -51,8 +51,8 @@
 
     {# About Us Section #}
   <section id="about-section" class="sm">
-    <div id="about-card" class="container-fluid d-flex pe-2 ps-0 shadow-lg">
-      <div class="text-box ">
+    <div id="about-card" class="container-fluid d-flex pe-2 ps-0 shadow-lg animate zoom-in">
+      <div class="text-box">
         <p class="text-secondary fs-5">{{ translations['about-text1'] }}</p>
         <p class="fs-3 pe-5 mt-3">{{ translations['about-text2'] }}</p>
         <p class="fs-4 pe-5 mt-4 text-secondary">{{ translations['about-text3'] }}</p>
@@ -95,7 +95,7 @@
   <section id="services-section" class="sm container">
     <p class="fs-2">{{ translations['services-title'] }}</p>
     <div id="services-cards" class="d-flex justify-content-between">
-      <div class="card shadow-lg">
+      <div class="card shadow-lg animate slide-in-right">
         <img src="{{ url_for('static', filename='images/services-driver.png') }}" class="card-img-top" alt="">
         <div class="card-body">
           <p class="card-text text-center fs-3">{{ translations['services-text1'] }}</p>
@@ -107,7 +107,7 @@
           <p class="card-text text-center fs-3">{{ translations['services-text2'] }}</p>
         </div>
       </div>
-      <div class="card shadow-lg">
+      <div class="card shadow-lg animate slide-in-left">
         <img src="{{ url_for('static', filename='images/services-cooker.png') }}" class="card-img-top" alt="">
         <div class="card-body">
           <p class="card-text text-center fs-3">{{ translations['services-text3'] }}</p>
@@ -122,7 +122,7 @@
       <p id="process-title" class="text-center fs-1 m-0 p-0">{{ translations['process-title'] }}</p>
     </div>
     <div id="process1" class="d-flex justify-content-between">
-      <div class="w-50 ">
+      <div class="w-50 animate slide-in-right">
         <img src="{{ url_for('static', filename='images/process1-img.png') }}" alt="" class="img-fluid process-img diagonal-border-img">
       </div>
       <div class="w-50 align-content-center">
@@ -135,12 +135,12 @@
         <p>{{ translations['card-step2'] }}</p>
         <p>{{ translations['card-text2'] }}</p>
       </div>
-      <div class="w-50 overflow-hidden">
+      <div class="w-50 overflow-hidden animate slide-in-left">
         <img src="{{ url_for('static', filename='images/process2-img.png') }}" alt="" class="img-fluid process-img diagonal-border-img">
       </div>
     </div >
     <div id="process3" class="d-flex justify-content-between">
-      <div class="w-50">
+      <div class="w-50 animate slide-in-right">
         <img src="{{ url_for('static', filename='images/process3-img.png') }}" alt="" class="img-fluid process-img diagonal-border-img">
       </div>
       <div class="w-50 align-content-center">
@@ -153,7 +153,7 @@
         <p>{{ translations['card-step4'] }}</p>
         <p>{{ translations['card-text4'] }}</p>
       </div>
-      <div class="w-50 ">
+      <div class="w-50 animate slide-in-left">
         <img src="{{ url_for('static', filename='images/process4-img.png') }}" alt="" class="img-fluid process-img diagonal-border-img">
       </div>
     </div >
@@ -164,21 +164,21 @@
     <p class="fs-2">{{ translations['contact-title'] }}</p>
     <div class="d-flex gap-4">
       <div id="contact-info" class="d-flex flex-column gap-4">
-        <div id="location-card" class="d-flex gap-3 shadow-lg rounded-4 p-3">
+        <div id="location-card" class="d-flex gap-3 shadow-lg rounded-4 p-3 animate slide-in-right">
           <i class="bi bi-geo-alt fs-1 text-primary align-self-center"></i>
           <div>
             <p class="text-secondary fw-bold">{{ translations['contact-location-text1'] }}</p>
             <p>{{ translations['contact-location-text2'] }}</p>
           </div>
         </div>
-        <div id="email-card" class="d-flex gap-3 shadow-lg rounded-4 p-3">
+        <div id="email-card" class="d-flex gap-3 shadow-lg rounded-4 p-3 animate slide-in-right">
           <i class="bi bi-envelope-at fs-1 text-primary align-self-center"></i>
           <div>
             <p class="text-secondary fw-bold">{{ translations['contact-email-text'] }}</p>
             <p>info@maharatelayadi.com</p>
           </div>
         </div>
-        <div id="tel-card" class="d-flex gap-3 shadow-lg rounded-top-4 p-3">
+        <div id="tel-card" class="d-flex gap-3 shadow-lg rounded-top-4 p-3 animate slide-in-right">
           <i class="bi bi-telephone-inbound fs-1 text-primary align-self-center"></i>
           <div>
             <p class="text-secondary fw-bold">{{ translations['contact-tel-text'] }}</p>
@@ -187,7 +187,7 @@
           </div>
         </div>
       </div>
-      <div id="contact-form" class="p-3 shadow-lg">
+      <div id="contact-form" class="p-3 shadow-lg animate slide-in-left">
         <form class="row g-3 needs-validation" novalidate>
           <div class="col-md-6">
             <label for="validationCustom01" class="form-label">{{ translations['contact-label-text1'] }}*</label>
@@ -212,7 +212,7 @@
       </div>
     </div>
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3622.178909022592!2d46.61644687526784!3d24.789326577975746!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2ee391981e308d%3A0xd04f3518e43b5c9b!2sMaharat%20Al%20Ayadi%20Recruitment!5e0!3m2!1sen!2sus!4v1739210851202!5m2!1sen!2sus"
-            style="border:0;" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            style="border:0;" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="animate zoom-in"></iframe>
 
   </section>
 {% endblock %}

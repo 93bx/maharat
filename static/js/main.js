@@ -2,6 +2,7 @@ function init() {
     applyRTL();
     formValidation();
     bottomCarousel();
+    applyAnimation();
 }
 
 function switchLang(lang) {
@@ -67,6 +68,22 @@ function bottomCarousel() {
     let copy = document.querySelector(".carousel-wrapper").cloneNode(true);
     document.querySelector(".carousel-container").appendChild(copy);
 }
+
+function applyAnimation(){
+    let elements = document.querySelectorAll(".animate");
+    let observer = new IntersectionObserver((entries) => {
+        entries.forEach( entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("visible")
+            }
+        });
+
+    }, {threshold:0.75});
+    elements.forEach(element => {
+        observer.observe(element);
+    })
+}
+
 document.addEventListener("DOMContentLoaded", () => {
     init();
 })

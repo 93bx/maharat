@@ -21,6 +21,10 @@ body {
     transform: rotateY(180deg);
 }
 
+.hero-imgs {
+    height: 45rem !important;
+}
+
 #hero-texts {
     position: absolute;
     top: 40%;
@@ -117,6 +121,48 @@ iframe {
     bottom: 65px;
     right: 5px;
     z-index: 2;
+}
+
+.animate {
+    opacity: 0;
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.fade-in {
+    transform: translateY(20px);
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.slide-in-left {
+    transform: translateX(-100px);
+}
+
+.slide-in-left.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.slide-in-right {
+    transform: translateX(100px);
+}
+
+.slide-in-right.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+
+.zoom-in {
+    transform: scale(0.1);
+}
+
+.zoom-in.visible {
+    opacity: 1;
+    transform: scale(1);
 }
 
 @keyframes slide-left {
